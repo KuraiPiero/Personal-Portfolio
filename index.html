@@ -8,31 +8,45 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/ca65bea77e.js" crossorigin="anonymous"></script>
 
 		<title>My Portfolio</title>
 	</head>
 	<body>
 		<header id="header">
 			<nav id="navbar">
-				<ul id="navbar-list">
+				<div id="primary-info">
+					<img src="https://i.pinimg.com/originals/eb/28/c3/eb28c3e3b0a7ab9b5dc97d74df34701a.jpg" alt="" id="portfolio-img" />
+					<div class="text-info">
+						<h2>Manuel Martinez</h2>
+						<h4>Web Designer</h4>
+						<h3>Welcome!</h3>
+					</div>
+				</div>
+
+				<ul id="navbar__list">
 					<li class="nav-item"><a href="#welcome-section" class="border-left">Home</a></li>
 					<li class="nav-item"><a href="#experience">Experience</a></li>
 					<li class="nav-item"><a href="#projects">Gallery</a></li>
 					<li class="nav-item"><a href="#contact" class="border-right">Contact Info</a></li>
 				</ul>
+				<ul id="social-media__list">
+					<li>
+						<a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+					</li>
+					<li>
+						<a href=""><i class="fa-brands fa-github"></i></a>
+					</li>
+					<li>
+						<a href=""><i class="fa-brands fa-free-code-camp"></i></a>
+					</li>
+				</ul>
 			</nav>
 		</header>
 		<main id="portfolio-content">
-			<section id="img-parallax">
-				<h1>Welcome, I am Manuel Martinez</h1>
-				<h4>Web Designer</h4>
-				<div class="img parallax_image_1"></div>
-				<div class="img parallax_image_2"></div>
-				<div class="img parallax_image_3"></div>
-				<div class="img parallax_image_4"></div>
-			</section>
 			<section id="info" class="portfolio__section">
 				<article id="welcome-section">
+					<h1 id="place-holder">.</h1>
 					<p>
 						My name is Manuel A Martinez Perez, and I am a creative and committed professional with a passion for teamwork and personal growth. I pride myself on being flexible and
 						objective, able to adapt to any situation and find innovative solutions to challenges. I thrive in friendly environments where collaboration and open communication are key, and
@@ -147,19 +161,19 @@
 				<article id="projects">
 					<h2>Gallery</h2>
 					<div id="projects-gallery">
-						<div class="project">
+						<div class="project-tile">
 							<a href="https://kuraipiero.github.io/Product-Landing-Page/" class="project_link"
 								><img src="https://i.pinimg.com/originals/f8/2b/02/f82b02664828d1f93cdae4df67634a7c.png" alt="" class="project-img" />
 								<p class="project-title--hidden">Landing Page</p>
 							</a>
 						</div>
-						<div class="project">
+						<div class="project-tile">
 							<a href="https://kuraipiero.github.io/Resume/" class="project_link"
 								><img src="https://i.pinimg.com/originals/21/cf/29/21cf290471e70730abbb4437419262c2.png" alt="" class="project-img" />
 								<p class="project-title--hidden">Personal CV</p>
 							</a>
 						</div>
-						<div class="project">
+						<div class="project-tile">
 							<a href="https://kuraipiero.github.io/Survey-Form/" class="project_link"
 								><img src="https://i.pinimg.com/originals/d3/52/4f/d3524f14af82a5a7c48e54dae2d03303.png" alt="" class="project-img" />
 								<p class="project-title--hidden">Simple Form</p>
@@ -168,24 +182,24 @@
 					</div>
 				</article>
 			</section>
+			<footer id="contact">
+				<h2>Contact Me</h2>
+				<form action="mailto:m.alemar1701@gmail.com" method="post" enctype="text/plain">
+					<label for="" id="name-label" class="form__label">
+						<input type="text" placeholder="Enter your name" id="name" required />
+					</label>
+					<label for="" id="email-label" class="form__label">
+						<input type="email" placeholder="Enter your email" id="email" required />
+					</label>
+					<label for="" id="subject-label" class="form__label">
+						<input type="text" placeholder="Subject.." id="email" required />
+					</label>
+					<label for="" class="form__label text-area">
+						<textarea name="" id="" cols="15" rows="10" placeholder="Your Message"></textarea>
+					</label>
+					<input type="submit" value="Submit" id="submit" />
+				</form>
+			</footer>
 		</main>
-		<footer id="contact">
-			<h2>Contact Me</h2>
-			<form action="mailto:m.alemar1701@gmail.com" method="post" enctype="text/plain">
-				<label for="" id="name-label" class="form__label">
-					<input type="text" placeholder="Enter your name" id="name" required />
-				</label>
-				<label for="" id="email-label" class="form__label">
-					<input type="email" placeholder="Enter your email" id="email" required />
-				</label>
-				<label for="" id="subject-label" class="form__label">
-					<input type="text" placeholder="Subject.." id="email" required />
-				</label>
-				<label for="" class="form__label text-area">
-					<textarea name="" id="" cols="15" rows="10" placeholder="Your Message"></textarea>
-				</label>
-				<input type="submit" value="Submit" id="submit" />
-			</form>
-		</footer>
 	</body>
 </html>
