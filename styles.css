@@ -1,0 +1,15 @@
+:root {
+	--tomato: #e66751;
+	--chrysler-blue: hsla(252, 76%, 48%, 1);
+	--picton-blue: #48b8f4;
+	--liver: hsla(9, 20%, 33%, 1);
+	--hunyadi-yellow: hsla(38, 69%, 57%, 1);
+	--gunmetal: #333842;
+	--cadet-gray: hsl(213, 15%, 69%);
+	--platinum: #f3f2f3;
+	--tan: hsla(33, 47%, 68%, 1);
+}
+* {
+	margin: 0;
+	padding: 0;
+}
