@@ -7,12 +7,24 @@
 		<link rel="stylesheet" href="styles.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&family=Karla:wght@300&display=swap" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,300;1,400&family=Karla:wght@300&family=Merriweather+Sans:wght@500&family=Montserrat:wght@300;500&family=Playfair+Display:ital,wght@0,700;1,400&family=Roboto+Mono&display=swap"
+			rel="stylesheet"
+		/>
+
 		<script defer src="https://kit.fontawesome.com/ca65bea77e.js" crossorigin="anonymous"></script>
 
 		<title>My Portfolio</title>
 	</head>
 	<body>
+		<div class="parallax-container">
+			<div class="parallax-img"></div>
+			<div class="parallax-img"></div>
+			<div class="parallax-img"></div>
+			<div class="parallax-img"></div>
+			<div class="parallax-img"></div>
+			<div class="parallax-img"></div>
+		</div>
 		<header id="header">
 			<nav id="navbar">
 				<div id="primary-info">
@@ -24,10 +36,18 @@
 				</div>
 
 				<ul id="navbar__list">
-					<li class="nav-item"><a href="#welcome-section" rel="noopener" class="border-left">Home</a></li>
-					<li class="nav-item"><a href="#experience" rel="noopener">Experience</a></li>
-					<li class="nav-item"><a href="#projects" rel="noopener">Gallery</a></li>
-					<li class="nav-item"><a href="#contact" rel="noopener" class="border-right">Contact Info</a></li>
+					<li class="nav-item">
+						<a href="#welcome-section" rel="noopener" class="border-left"><h3>Home</h3></a>
+					</li>
+					<li class="nav-item">
+						<a href="#experience" rel="noopener"><h3>Experience</h3></a>
+					</li>
+					<li class="nav-item">
+						<a href="#projects" rel="noopener"><h3>Gallery</h3></a>
+					</li>
+					<li class="nav-item">
+						<a href="#contact" rel="noopener" class="border-right"><h3>Contact Info</h3></a>
+					</li>
 				</ul>
 				<ul id="social-media__list">
 					<li class="social-media-item">
@@ -47,13 +67,13 @@
 		<main id="portfolio-content">
 			<section id="info" class="portfolio__section">
 				<article id="welcome-section">
-					<h1 id="place-holder">.</h1>
-					<p>
+					<h1 id="place-holder">About Me</h1>
+					<p class="welcome-text">
 						My name is Manuel A Martinez Perez, and I am a creative and committed professional with a passion for teamwork and personal growth. I pride myself on being flexible and
 						objective, able to adapt to any situation and find innovative solutions to challenges. I thrive in friendly environments where collaboration and open communication are key, and
 						I am always eager to learn and improve my performance.
 					</p>
-					<p>
+					<p class="welcome-text">
 						I believe that curiosity is the key to success, and I am constantly seeking out new opportunities to expand my knowledge and skills. Whether it's through attending workshops
 						and conferences, collaborating with colleagues, or simply exploring new ideas on my own, I am always looking for ways to grow and evolve as a person and a professional.
 					</p>
@@ -63,9 +83,9 @@
 					<div class="job-experience">
 						<div class="job-info">
 							<h3 class="job-title">Help Desk Technician</h3>
-							<span class="job-detail">Softtek | </span> <span class="job-detail">Full-time</span><br />
-							<span class="job-detail">May 2021 - Present | </span><span class="job-detail">1 yr 11 months</span><br />
-							<span class="job-detail">Medellín, Antioquia, Colombia | </span><span class="job-detail">Remote</span><br />
+							<h4 class="job-detail"><span>Softtek | Full-time</span></h4>
+							<h4 class="job-detail">May 2021 - Present | 1 yr 11 months</h4>
+							<h4 class="job-detail">Medellín, Antioquia, Colombia | Remote</h4>
 						</div>
 						<div class="job-summary">
 							<p>
@@ -97,9 +117,9 @@
 					<div class="job-experience">
 						<div class="job-info">
 							<h3 class="job-title">Help Desk Dispatcher</h3>
-							<span class="job-detail">Algar Tech | </span><span class="job-detail">Full-time</span><br />
-							<span class="job-detail">Nov 2019 - May 2021 | </span><span class="job-detail">1 yr 7 months</span><br />
-							<span class="job-detail">Medellin - Antioquia - Colombia | </span><span class="job-detail">Hybrid</span><br />
+							<h4 class="job-detail">Algar Tech | Full-time</h4>
+							<h4 class="job-detail">Nov 2019 - May 2021 | 1 yr 7 months</h4>
+							<h4 class="job-detail">Medellin - Antioquia - Colombia | Hybrid</h4>
 						</div>
 						<div class="job-summary">
 							<p>
@@ -123,9 +143,9 @@
 					<div class="job-experience">
 						<div class="job-info">
 							<h3 class="job-title">Call Center Representative</h3>
-							<span class="job-detail">Allus Global BPO Center</span><span class="job-detail">· Full-time</span><br />
-							<span class="job-detail">Mar 2014 - Aug 2015</span><span class="job-detail">· 1 yr 6 months</span><br />
-							<span class="job-detail">Medellín, Antioquia, Colombia</span><span class="job-detail">· On-site</span><br />
+							<h4 class="job-detail">Allus Global BPO Center | Full-time</h4>
+							<h4 class="job-detail">Mar 2014 - Aug 2015 | 1 yr 6 months</h4>
+							<h4 class="job-detail">Medellín, Antioquia, Colombia | On-site</h4>
 						</div>
 						<div class="job-summary">
 							<p>As a customer service agent in my first job, I honed my communication and problem-solving skills by interacting with clients on a daily basis.</p>
