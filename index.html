@@ -5,222 +5,257 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,300;1,400&family=Karla:wght@300&family=Merriweather+Sans:wght@500&family=Montserrat:wght@300;500&family=Playfair+Display:ital,wght@0,700;1,400&family=Roboto+Mono&display=swap"
-			rel="stylesheet"
-		/>
-
+		<script defer src="./scripts/font-loader.js"></script>
 		<script defer src="https://kit.fontawesome.com/ca65bea77e.js" crossorigin="anonymous"></script>
 
 		<title>My Portfolio</title>
 	</head>
 	<body>
-		<div class="parallax-container">
-			<div class="parallax-img"></div>
-			<div class="parallax-img"></div>
-			<div class="parallax-img"></div>
-			<div class="parallax-img"></div>
-			<div class="parallax-img"></div>
-			<div class="parallax-img"></div>
-		</div>
-		<header id="header">
-			<nav id="navbar">
+		<header id="header" role="banner" aria-label="Manuel Martinez's Portfolio">
+			<a href="#main-content" id="skip-link">Skip to main content</a>
+			<nav id="navbar" role="navigation">
 				<div id="primary-info">
-					<img src="https://i.pinimg.com/originals/eb/28/c3/eb28c3e3b0a7ab9b5dc97d74df34701a.jpg" alt="" id="portfolio-img" />
+					<img
+						src="https://i.pinimg.com/originals/eb/28/c3/eb28c3e3b0a7ab9b5dc97d74df34701a.jpg"
+						alt="Manuel Martinez's Portfolio Image"
+						id="portfolio-img"
+						title="Manuel Martinez's Portfolio Image"
+					/>
 					<div class="text-info">
-						<h1>Manuel Martinez</h1>
-						<h3>Web Designer</h3>
+						<h1 role="heading">Manuel Martinez</h1>
+						<h3 role="sub-title">Web Designer</h3>
 					</div>
 				</div>
 
-				<ul id="navbar__list">
-					<li class="nav-item">
-						<a href="#welcome-section" rel="noopener" class="border-left"><h3>Home</h3></a>
+				<ul id="sections-list" role="list">
+					<li class="nav-item border-top" role="list-item">
+						<a href="#welcome-section" rel="noopener" class="link" role="link" aria-current="page" tabindex="1">
+							<span class="icon"><i class="fas fa-home"></i></span>
+							<h3>Home</h3>
+						</a>
 					</li>
-					<li class="nav-item">
-						<a href="#experience" rel="noopener"><h3>Experience</h3></a>
+					<li class="nav-item" role="list-item">
+						<a href="#experience" rel="noopener" role="link" class="link" tabindex="2">
+							<span class="icon"><i class="fas fa-user"></i></span>
+							<h3>Experience</h3>
+						</a>
 					</li>
-					<li class="nav-item">
-						<a href="#projects" rel="noopener"><h3>Gallery</h3></a>
+					<li class="nav-item" role="list-item">
+						<a href="#projects" rel="noopener" role="link" class="link" tabindex="3">
+							<span class="icon"><i class="fas fa-image"></i></span>
+							<h3>Gallery</h3>
+						</a>
 					</li>
-					<li class="nav-item">
-						<a href="#contact" rel="noopener" class="border-right"><h3>Contact Info</h3></a>
+					<li class="nav-item" role="list-item">
+						<a href="#contact" rel="noopener" class="border-right link" role="link" tabindex="4">
+							<span class="icon"><i class="fas fa-envelope"></i></span>
+							<h3>Contact Info</h3>
+						</a>
 					</li>
 				</ul>
+
 				<ul id="social-media__list">
 					<li class="social-media-item">
-						<a href="https://www.linkedin.com/in/alastar-blacksnow/" rel="noopener" class="social-media-link"><i class="fa-brands fa-linkedin-in" class="social-icon"></i></a>
+						<a href="https://www.linkedin.com/in/alastar-blacksnow/" rel="noopener" class="social-media-link" target="_blank" role="link" tabindex="5">
+							<i class="fa-brands fa-linkedin-in"></i
+						></a>
 					</li>
 					<li class="social-media-item">
-						<a href="https://github.com/KuraiPiero?tab=repositories" rel="noopener" class="social-media-link"> <i class="fa-brands fa-github" class="social-icon"></i></a>
+						<a href="https://github.com/KuraiPiero?tab=repositories" rel="noopener" class="social-media-link" target="_blank" role="link" tabindex="6"
+							><i class="fa-brands fa-github"></i>
+						</a>
 					</li>
 					<li class="social-media-item">
-						<a href="https://www.freecodecamp.org/kuraipiero" rel="noopener" class="social-media-link" target="_blank" rel=""
-							><i class="fa-brands fa-free-code-camp" class="social-icon"></i
+						<a href="https://www.freecodecamp.org/kuraipiero" rel="noopener" class="social-media-link" target="_blank" role="link" tabindex="7">
+							<i class="fa-brands fa-free-code-camp"></i
 						></a>
 					</li>
 				</ul>
 			</nav>
 		</header>
-		<main id="portfolio-content">
-			<section id="info" class="portfolio__section">
-				<article id="welcome-section">
-					<h1 id="place-holder">About Me</h1>
+		<main id="portfolio-content" role="main">
+			<section id="welcome-section" class="section parallax bg">
+				<h1 class="welcome-message">Welcome, My name is</h1>
+				<h3 id="name">Manuel Martinez</h3>
+				<div id="animated-text">
+					<h4 class="static-text">I'm A <span id="type-writers"></span><span class="cursor">I</span></h4>
+				</div>
+			</section>
+			<section id="about-section" class="section">
+				<article id="about-info__container">
+					<h1 id="about-me" aria-label="About Manuel A Martinez Perez, Web Designer.">About Me</h1>
 					<p class="welcome-text">
-						My name is Manuel A Martinez Perez, and I am a creative and committed professional with a passion for teamwork and personal growth. I pride myself on being flexible and
-						objective, able to adapt to any situation and find innovative solutions to challenges. I thrive in friendly environments where collaboration and open communication are key, and
-						I am always eager to learn and improve my performance.
-					</p>
-					<p class="welcome-text">
+						<span class="highlight">Hello, my name is Manuel A. Martinez P.</span>, and I am a creative and committed professional with a passion for teamwork and personal growth. I pride
+						myself on being flexible and objective, able to adapt to any situation and find innovative solutions to challenges. I thrive in friendly environments where collaboration and
+						open communication are key, and I am always eager to learn and improve my performance. <br /><br />
 						I believe that curiosity is the key to success, and I am constantly seeking out new opportunities to expand my knowledge and skills. Whether it's through attending workshops
 						and conferences, collaborating with colleagues, or simply exploring new ideas on my own, I am always looking for ways to grow and evolve as a person and a professional.
 					</p>
-				</article>
-				<article class="info-box" id="experience">
-					<h2>Experience</h2>
-					<div class="job-experience">
-						<div class="job-info">
-							<h3 class="job-title">Help Desk Technician</h3>
-							<h4 class="job-detail"><span>Softtek | Full-time</span></h4>
-							<h4 class="job-detail">May 2021 - Present | 1 yr 11 months</h4>
-							<h4 class="job-detail">Medellín, Antioquia, Colombia | Remote</h4>
-						</div>
-						<div class="job-summary">
-							<p>
-								As an IT support consultant, my responsibilities have included establishing and maintaining a trusting relationship between clients and theaters, as well as ensuring
-								that any issues that could affect the performance of the theater are resolved promptly and effectively. In this role, I have gained expertise in troubleshooting a
-								variety of technical problems, including:
-							</p>
-							<ul>
-								<li>Integrating payment terminals with their corresponding point-of-sale systems so that clients can pay with credit or debit cards.</li>
-								<li>Addressing and resolving any malfunctions that prevent machines from working efficiently.</li>
-								<li>
-									I have gained extensive experience setting up and troubleshooting a wide range of machines commonly used in theaters, including advertisement screens, automatic
-									kiosks, PCs, printers, tablets, and more.
+					<article class="about-div">
+						<h3 class="details-title">Personal Details</h3>
+						<div class="details-lists">
+							<ul class="personal-details__list">
+								<li class="detail-item"><span class="detail-title">Birthday </span><span class="detail-info">16/06/1993</span></li>
+								<li class="detail-item"><span class="detail-title">Phone </span><span class="detail-info">+57 3137380265</span></li>
+								<li class="detail-item"><span class="detail-title">Email </span><span class="detail-info">m.alemar1701@gmail.com</span></li>
+								<li class="detail-item"><span class="detail-title">Cargo </span><span class="detail-info">Web Developer</span></li>
+							</ul>
+							<ul class="personal-hobbies__list">
+								<li class="hobbie-item">
+									<span class="hobbie-icon"><i class="fa-solid fa-gamepad"></i></span><span class="hobbie-info">Gaming</span>
+								</li>
+								<li class="hobbie-item">
+									<span class="hobbie-icon"><i class="fa-solid fa-book"></i></span><span class="hobbie-info">Read</span>
+								</li>
+								<li class="hobbie-item">
+									<span class="hobbie-icon"><i class="fa-solid fa-plane"></i></span><span class="hobbie-info">Travel</span>
+								</li>
+								<li class="hobbie-item">
+									<span class="hobbie-icon"><i class="fa-solid fa-film"></i></span><span class="hobbie-info">Movies</span>
+								</li>
+								<li class="hobbie-item">
+									<span class="hobbie-icon"><i class="fa-solid fa-microchip"></i></span><span class="hobbie-info">Tech</span>
+								</li>
+								<li class="hobbie-item">
+									<span class="hobbie-icon"><i class="fa-solid fa-person-biking"></i></span><span class="hobbie-info">Ciclism</span>
+								</li>
+								<li class="hobbie-item">
+									<span class="hobbie-icon"><i class="fa-solid fa-leaf"></i></span><span class="hobbie-info">Nature</span>
+								</li>
+								<li class="hobbie-item">
+									<span class="hobbie-icon"><i class="fa-solid fa-headphones"></i></span><span class="hobbie-info">Music</span>
 								</li>
 							</ul>
-							<p>
-								As an IT support consultant, I have demonstrated my commitment to enhancing the performance and efficiency of the Help Desk. I have received commendations from both
-								customers and leaders for my proficiency in creating scripts that automate system configuration tasks, resulting in significant time and productivity gains. My
-								willingness to go above and beyond to resolve any issues that may arise is well-recognized by my colleagues and clients. My expertise in troubleshooting a wide range of
-								technical problems, from resolving connectivity issues to configuring different types of hardware, has enabled me to provide prompt and effective solutions to clients.
-								Moreover, I am a proactive learner who is always eager to acquire new skills and take on new challenges. I believe that my passion for problem-solving and my commitment
-								to delivering exceptional customer service make me a valuable asset to any team.
-							</p>
 						</div>
-						<div class="job-skills">
-							Ticketing Systems · Server troubleshooting · Technician management · Bilingual communication · Dispatching · IT support · Technical issues · Customer Service
-						</div>
-					</div>
-					<div class="job-experience">
-						<div class="job-info">
-							<h3 class="job-title">Help Desk Dispatcher</h3>
-							<h4 class="job-detail">Algar Tech | Full-time</h4>
-							<h4 class="job-detail">Nov 2019 - May 2021 | 1 yr 7 months</h4>
-							<h4 class="job-detail">Medellin - Antioquia - Colombia | Hybrid</h4>
-						</div>
-						<div class="job-summary">
-							<p>
-								As an IT consultant and dispatcher, I was able to gain valuable experience in a new expertise field. This was my first bilingual job, which allowed me to hone my
-								language skills while working on technical issues. One of the most important aspects of this role was identifying the root cause of a problem and assigning it to the
-								appropriate technician.
-							</p>
-							<ul>
-								My responsibilities included:
-								<li>Receiving issue ticket requests via email, platform, or phone and then determining the type of server or equipment that was affected.</li>
-								<li>Search for a qualified technician who could assist on site and resolve the issue.</li>
-								<li>Managed technician appointments, handling all aspects from creation to updates and cancellations, as needed.</li>
-								<li>Additionally, I was responsible for requesting details about the location and ensuring onsite access for the technician.</li>
-							</ul>
-							<p>Overall, this role taught me the importance of effective communication, attention to detail, and the ability to work under pressure.</p>
-						</div>
-						<div class="job-skills">
-							Technical Support · Information Technology · Remote Teamwork · Scripting · Automation · Network Connectivity · Customer Service · Help Desk Support · Troubleshooting
-						</div>
-					</div>
-					<div class="job-experience">
-						<div class="job-info">
-							<h3 class="job-title">Call Center Representative</h3>
-							<h4 class="job-detail">Allus Global BPO Center | Full-time</h4>
-							<h4 class="job-detail">Mar 2014 - Aug 2015 | 1 yr 6 months</h4>
-							<h4 class="job-detail">Medellín, Antioquia, Colombia | On-site</h4>
-						</div>
-						<div class="job-summary">
-							<p>As a customer service agent in my first job, I honed my communication and problem-solving skills by interacting with clients on a daily basis.</p>
-							<ul>
-								Some of my key responsibilities included:
-								<li>
-									Providing excellent customer service by answering calls promptly, actively listening to clients' concerns and questions, and addressing them in a friendly and
-									professional manner.
-								</li>
-								<li>
-									Demonstrating an in-depth knowledge of billing procedures and pricing plans, and explaining them clearly to clients to help them better understand their bills and
-									avoid confusion or disputes.
-								</li>
-								<li>Coordinating with technicians to schedule and dispatch service to clients' homes, ensuring that their issues were resolved quickly and efficiently.</li>
-								<li>
-									Effectively promoting and selling new products and services by highlighting their features and benefits, and customizing my pitch to each client's needs and
-									preferences.
-								</li>
-								<li>
-									Through my hard work and dedication to serving clients, I was able to consistently meet or exceed my performance targets, and received positive feedback from both
-									clients and management.
-								</li>
-							</ul>
-							<p>
-								My experience in customer service has instilled in me a strong commitment to quality, attention to detail, and a customer-centric approach to problem-solving, all of
-								which I believe are valuable assets in any role.
-							</p>
-						</div>
-						<div class="job-skills">
-							Call center · Inbound calls · Customer Support · Data Analysis · Sales · Product Knowledge · Upselling · Service Improvement · Performance tracking. · Customer Service
-						</div>
-					</div>
-				</article>
-				<article id="projects">
-					<h2>Gallery</h2>
-					<div id="projects-gallery">
-						<div class="project-tile">
-							<a href="https://kuraipiero.github.io/Product-Landing-Page/" class="project_link"
-								><img src="https://i.pinimg.com/originals/f8/2b/02/f82b02664828d1f93cdae4df67634a7c.png" alt="" class="project-img" />
-								<p class="project-title--hidden">Landing Page</p>
-							</a>
-						</div>
-						<div class="project-tile">
-							<a href="https://kuraipiero.github.io/Resume/" class="project_link"
-								><img src="https://i.pinimg.com/originals/21/cf/29/21cf290471e70730abbb4437419262c2.png" alt="" class="project-img" />
-								<p class="project-title--hidden">Personal CV</p>
-							</a>
-						</div>
-						<div class="project-tile">
-							<a href="https://kuraipiero.github.io/Survey-Form/" class="project_link"
-								><img src="https://i.pinimg.com/originals/d3/52/4f/d3524f14af82a5a7c48e54dae2d03303.png" alt="" class="project-img" />
-								<p class="project-title--hidden">Simple Form</p>
-							</a>
-						</div>
-					</div>
+					</article>
+					<div class="CV-button"><a href="https://drive.google.com/uc?export=download&id=1RR1MJ1F7NnjmupATao-o3Z8SNX4CkdXG">Download CV</a></div>
 				</article>
 			</section>
-			<footer id="contact">
-				<h2>Contact Me</h2>
-				<form action="mailto:m.alemar1701@gmail.com" method="post" enctype="text/plain">
-					<label for="" id="name-label" class="form__label">
-						<input type="text" placeholder="Enter your name" id="name" required />
-					</label>
-					<label for="" id="email-label" class="form__label">
-						<input type="email" placeholder="Enter your email" id="email" required />
-					</label>
-					<label for="" id="subject-label" class="form__label">
-						<input type="text" placeholder="Subject.." id="email" required />
-					</label>
-					<label for="" class="form__label text-area">
-						<textarea name="" id="" cols="15" rows="10" placeholder="Your Message"></textarea>
-					</label>
-					<input type="submit" value="Submit" id="submit" />
-				</form>
-			</footer>
+			<section class="info-box section" id="experience" aria-labelledby="experience-field">
+				<h2 id="experience-field">Experience</h2>
+				<div class="job-experience">
+					<div class="job-info">
+						<h3 class="job-title">Help Desk Technician</h3>
+						<h4 class="job-detail"><span>Softtek | Full-time</span></h4>
+						<h4 class="job-detail">May 2021 - Present | 1 yr 11 months</h4>
+						<h4 class="job-detail">Medellín, Antioquia, Colombia | Remote</h4>
+					</div>
+					<div class="job-summary">
+						<p>
+							As an IT support consultant, my responsibilities have included establishing and maintaining a trusting relationship between clients and theaters, as well as ensuring that
+							any issues that could affect the performance of the theater are resolved promptly and effectively. In this role, I have gained expertise in troubleshooting a variety of
+							technical problems, including:
+						</p>
+						<ul>
+							<li>Integrating payment terminals with their corresponding point-of-sale systems so that clients can pay with credit or debit cards.</li>
+							<li>Addressing and resolving any malfunctions that prevent machines from working efficiently.</li>
+							<li>
+								I have gained extensive experience setting up and troubleshooting a wide range of machines commonly used in theaters, including advertisement screens, automatic kiosks,
+								PCs, printers, tablets, and more.
+							</li>
+						</ul>
+						<p>
+							As an IT support consultant, I have demonstrated my commitment to enhancing the performance and efficiency of the Help Desk. I have received commendations from both
+							customers and leaders for my proficiency in creating scripts that automate system configuration tasks, resulting in significant time and productivity gains. My willingness
+							to go above and beyond to resolve any issues that may arise is well-recognized by my colleagues and clients. My expertise in troubleshooting a wide range of technical
+							problems, from resolving connectivity issues to configuring different types of hardware, has enabled me to provide prompt and effective solutions to clients. Moreover, I am
+							a proactive learner who is always eager to acquire new skills and take on new challenges. I believe that my passion for problem-solving and my commitment to delivering
+							exceptional customer service make me a valuable asset to any team.
+						</p>
+					</div>
+					<div class="job-skills">
+						Ticketing Systems · Server troubleshooting · Technician management · Bilingual communication · Dispatching · IT support · Technical issues · Customer Service
+					</div>
+				</div>
+				<div class="job-experience">
+					<div class="job-info">
+						<h3 class="job-title">Help Desk Dispatcher</h3>
+						<h4 class="job-detail">Algar Tech | Full-time</h4>
+						<h4 class="job-detail">Nov 2019 - May 2021 | 1 yr 7 months</h4>
+						<h4 class="job-detail">Medellin - Antioquia - Colombia | Hybrid</h4>
+					</div>
+					<div class="job-summary">
+						<p>
+							As an IT consultant and dispatcher, I was able to gain valuable experience in a new expertise field. This was my first bilingual job, which allowed me to hone my language
+							skills while working on technical issues. One of the most important aspects of this role was identifying the root cause of a problem and assigning it to the appropriate
+							technician.
+						</p>
+						<ul>
+							My responsibilities included:
+							<li>Receiving issue ticket requests via email, platform, or phone and then determining the type of server or equipment that was affected.</li>
+							<li>Search for a qualified technician who could assist on site and resolve the issue.</li>
+							<li>Managed technician appointments, handling all aspects from creation to updates and cancellations, as needed.</li>
+							<li>Additionally, I was responsible for requesting details about the location and ensuring onsite access for the technician.</li>
+						</ul>
+						<p>Overall, this role taught me the importance of effective communication, attention to detail, and the ability to work under pressure.</p>
+					</div>
+					<div class="job-skills">
+						Technical Support · Information Technology · Remote Teamwork · Scripting · Automation · Network Connectivity · Customer Service · Help Desk Support · Troubleshooting
+					</div>
+				</div>
+				<div class="job-experience">
+					<div class="job-info">
+						<h3 class="job-title">Call Center Representative</h3>
+						<h4 class="job-detail">Allus Global BPO Center | Full-time</h4>
+						<h4 class="job-detail">Mar 2014 - Aug 2015 | 1 yr 6 months</h4>
+						<h4 class="job-detail">Medellín, Antioquia, Colombia | On-site</h4>
+					</div>
+					<div class="job-summary">
+						<p>As a customer service agent in my first job, I honed my communication and problem-solving skills by interacting with clients on a daily basis.</p>
+						<ul>
+							Some of my key responsibilities included:
+							<li>
+								Providing excellent customer service by answering calls promptly, actively listening to clients' concerns and questions, and addressing them in a friendly and
+								professional manner.
+							</li>
+							<li>
+								Demonstrating an in-depth knowledge of billing procedures and pricing plans, and explaining them clearly to clients to help them better understand their bills and avoid
+								confusion or disputes.
+							</li>
+							<li>Coordinating with technicians to schedule and dispatch service to clients' homes, ensuring that their issues were resolved quickly and efficiently.</li>
+							<li>
+								Effectively promoting and selling new products and services by highlighting their features and benefits, and customizing my pitch to each client's needs and
+								preferences.
+							</li>
+							<li>
+								Through my hard work and dedication to serving clients, I was able to consistently meet or exceed my performance targets, and received positive feedback from both
+								clients and management.
+							</li>
+						</ul>
+						<p>
+							My experience in customer service has instilled in me a strong commitment to quality, attention to detail, and a customer-centric approach to problem-solving, all of which
+							I believe are valuable assets in any role.
+						</p>
+					</div>
+					<div class="job-skills">
+						Call center · Inbound calls · Customer Support · Data Analysis · Sales · Product Knowledge · Upselling · Service Improvement · Performance tracking. · Customer Service
+					</div>
+				</div>
+			</section>
+			<section id="projects" class="section" aria-labelledby="projects-field">
+				<h2>Gallery</h2>
+				<div id="projects-gallery">
+					<div class="project-tile">
+						<a href="https://kuraipiero.github.io/Product-Landing-Page/" class="project_link"
+							><img src="https://i.pinimg.com/originals/f8/2b/02/f82b02664828d1f93cdae4df67634a7c.png" alt="" class="project-img" />
+							<p class="project-title--hidden">Landing Page</p>
+						</a>
+					</div>
+					<div class="project-tile">
+						<a href="https://kuraipiero.github.io/Resume/" class="project_link"
+							><img src="https://i.pinimg.com/originals/21/cf/29/21cf290471e70730abbb4437419262c2.png" alt="" class="project-img" />
+							<p class="project-title--hidden">Personal CV</p>
+						</a>
+					</div>
+					<div class="project-tile">
+						<a href="https://kuraipiero.github.io/Survey-Form/" class="project_link"
+							><img src="https://i.pinimg.com/originals/d3/52/4f/d3524f14af82a5a7c48e54dae2d03303.png" alt="" class="project-img" />
+							<p class="project-title--hidden">Simple Form</p>
+						</a>
+					</div>
+				</div>
+			</section>
 		</main>
 	</body>
+	<script src="./scripts/script.js"></script>
 </html>
