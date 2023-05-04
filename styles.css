@@ -5,6 +5,7 @@
 	--liver: #654843;
 	--hunyadi-yellow: #dda646;
 	--gunmetal: #333842;
+	--dark-gray: #3b414d;
 	--cadet-gray: #5d6772;
 	--platinum: #ffffff;
 	--tan: #d4b187;
@@ -17,7 +18,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-size: 1.02em;
+	font-size: 0.9vw;
 	font-family: 'Josefin Sans', sans-serif;
 }
 h1 {
@@ -32,26 +33,12 @@ h3 {
 h4 {
 	font-family: 'Roboto Mono', monospace;
 }
-
-@-webkit-keyframes shiny-btn1 {
-	0% {
-		-webkit-transform: scale(0) rotate(45deg);
-		opacity: 0;
-	}
-	80% {
-		-webkit-transform: scale(0) rotate(45deg);
-		opacity: 0.5;
-	}
-	81% {
-		-webkit-transform: scale(4) rotate(45deg);
-		opacity: 1;
-	}
-	100% {
-		-webkit-transform: scale(50) rotate(45deg);
-		opacity: 0;
-	}
+#navbar {
+	position: fixed;
+	top: 0px;
+	width: 12vw;
+	height: 100vh;
 }
-
 @media screen and (min-width: 1366px) {
 	body {
 		display: grid;
@@ -62,18 +49,15 @@ h4 {
 
 		background: var(--gunmetal);
 	}
-	#header,
-	#navbar {
+	#header {
 		position: fixed;
 		top: 0;
 		width: 12vw;
 		background: var(--cadet-gray);
 		height: 100vh;
-	}
-	#header,
-	#navbar {
 		grid-area: header;
 	}
+
 	#skip-link {
 		display: none;
 		position: absolute;
@@ -205,16 +189,17 @@ h4 {
 	}
 	#portfolio-content {
 		display: grid;
-		position: relative;
+
 		scroll-behavior: smooth;
 		grid-area: main;
 		overflow-x: hidden;
 		overflow-y: scroll;
 		height: 100vh;
-		width: 90vw;
+		width: 88vw;
 		background: var(--gunmetal);
 		color: var(--platinum);
 		perspective: 3px;
+		grid-template-rows: repeat(4, minmax(100vh, 1fr));
 	}
 
 	#portfolio-content::-webkit-scrollbar,
@@ -223,7 +208,7 @@ h4 {
 		width: 10px;
 	}
 	#portfolio-content::-webkit-scrollbar-thumb {
-		background: var(--gunmetal);
+		background: var(--picton-blue);
 		border-radius: 5px;
 		transform: perspective(-20px);
 	}
@@ -243,7 +228,7 @@ h4 {
 		height: 100vh;
 		background: transparent;
 		display: flex;
-		background: linear-gradient(180deg, rgba(242, 253, 255, 0) 65%, rgba(51, 56, 66, 1) 99%);
+		background: linear-gradient(180deg, rgba(242, 253, 255, 0) 45%, var(--gunmetal) 99%);
 	}
 	.welcome-message {
 		position: absolute;
@@ -300,35 +285,43 @@ h4 {
 		background-size: cover;
 	}
 	#about-section {
-		height: 70vh;
+		position: relative;
+		top: 0;
+		height: 100vh;
 		width: 100%;
 	}
 	#about-info__container {
-		position: absolute;
+		position: relative;
 		display: grid;
-		top: 1em;
-		left: 1vw;
-		height: 68vh;
-		width: 82vw;
-		grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+		height: 100vh;
+		width: 100%;
+		grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr;
+		padding: 0.5em;
 	}
-	#about-me {
+	.section__title {
 		text-align: center;
 		font-weight: 700;
 		text-transform: uppercase;
 		font-size: 2em;
+		margin: 1vw 0;
 	}
+
 	.welcome-text {
 		text-align: justify;
-		margin-bottom: 1em;
+		width: 85vw;
 		height: 7vh;
 		margin-bottom: 5vh;
+		position: relative;
+		left: 1em;
 	}
 	.highlight {
 		color: var(--picton-blue);
 		font-weight: 600;
 	}
-
+	.about-div {
+		position: relative;
+		left: 1em;
+	}
 	.details-title {
 		position: relative;
 		font-weight: 800;
@@ -337,7 +330,8 @@ h4 {
 	}
 	.details-lists {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+		grid-template-columns: repeat(2, minmax(100px, 1fr));
+		width: 90vw;
 	}
 	.personal-details__list {
 		position: relative;
@@ -395,9 +389,14 @@ h4 {
 	.fa-solid {
 		font-size: 1.5em;
 	}
+	.fa-clipboard,
+	.fas {
+		font-size: 1.3em;
+		margin: 0.2em;
+	}
 	.CV-button {
-		justify-self: center;
-		margin: 2em;
+		position: relative;
+		margin: 5em auto;
 	}
 	.CV-button a {
 		text-decoration: none;
@@ -418,5 +417,116 @@ h4 {
 		border-radius: 15px;
 		padding: 1.05em;
 		font-size: 1.25em;
+	}
+	#experience {
+		height: 105vh;
+		width: 100%;
+	}
+
+	#experience-info__container {
+		display: grid;
+		grid-template-columns: 0.6fr 1.1fr;
+		grid-template-rows: 0.6fr 1.1fr;
+		grid-template-areas:
+			'cinepolis cinepolis'
+			'algar allus';
+		gap: 0.55vw;
+	}
+	#cinepolis {
+		grid-area: cinepolis;
+		border-bottom: 1px solid var(--picton-blue);
+		width: 86vw;
+	}
+	#algar {
+		grid-area: algar;
+		border-top: 1px solid var(--picton-blue);
+		border-right: 1px solid var(--picton-blue);
+		width: 38vw;
+	}
+	#allus {
+		grid-area: allus;
+		border-top: 1px solid var(--picton-blue);
+		border-left: 1px solid var(--picton-blue);
+		width: 47.5vw;
+	}
+	.job-title {
+		font-size: 1.2vw;
+	}
+
+	.job-experience {
+		position: relative;
+		left: 1vw;
+		background: var(--cadet-gray);
+		padding: 0.2em;
+		text-align: justify;
+	}
+	.job-detail {
+		font-weight: 300;
+		font-family: 'Roboto Mono', monospace;
+		font-size: 0.8em;
+		line-height: 17px;
+	}
+	.job-info > h4:nth-child(2) {
+		color: var(--picton-blue);
+		font-size: 1.1vw;
+		line-height: 1.2vw;
+		font-weight: 500;
+	}
+	.job-info > h4:nth-child(4) {
+		margin-bottom: 0.5vw;
+	}
+	.job-summary > p {
+		margin: 0.3vw 0;
+	}
+	.job-summary > ul > li {
+		margin: 0.2vw 0 0.2vw 1vw;
+	}
+	.job-skills {
+		display: none;
+	}
+	#projects,
+	#projects-gallery {
+		width: 100%;
+		gap: 1em;
+		height: 100vh;
+	}
+
+	#projects-gallery {
+		display: flex;
+		flex-flow: wrap row;
+		justify-content: center;
+	}
+	.project-tile > a > img {
+		width: 28vw;
+		height: 19.5vw;
+	}
+	.project-tile {
+		display: flex;
+		width: 30%;
+		height: 50%;
+	}
+	.project_link {
+		text-decoration: none;
+	}
+	.project-title--over {
+		top: -87.5%;
+		left: 0%;
+		position: relative;
+		font-size: 1.4vw;
+		font-family: 'Merriweather Sans';
+		font-weight: 800;
+		text-align: center;
+		background: var(--picton-blue);
+		width: 28vw;
+		padding: 18vh;
+		height: 39vh;
+		opacity: 0;
+		transition-delay: 0.1s;
+		transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+		transition: 0.5s;
+		color: var(--platinum);
+	}
+	.project-title--over:hover {
+		opacity: 0.8;
 	}
 }
