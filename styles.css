@@ -518,8 +518,8 @@ h4 {
 		text-align: center;
 		background: var(--picton-blue);
 		width: 28vw;
-		padding: 18vh;
-		height: 39vh;
+		padding: 18vw;
+		height: 39vw;
 		opacity: 0;
 		transition-delay: 0.1s;
 		transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
