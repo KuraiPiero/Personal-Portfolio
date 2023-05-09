@@ -189,11 +189,9 @@ h4 {
 	}
 	#portfolio-content {
 		display: grid;
-
 		scroll-behavior: smooth;
 		grid-area: main;
-		overflow-x: hidden;
-		overflow-y: scroll;
+		overflow: hidden;
 		height: 100vh;
 		width: 88vw;
 		background: var(--gunmetal);
@@ -202,16 +200,6 @@ h4 {
 		grid-template-rows: repeat(4, minmax(100vh, 1fr));
 	}
 
-	#portfolio-content::-webkit-scrollbar,
-	#portfolio-content::-webkit-scrollbar-track {
-		background: var(--platinum);
-		width: 10px;
-	}
-	#portfolio-content::-webkit-scrollbar-thumb {
-		background: var(--picton-blue);
-		border-radius: 5px;
-		transform: perspective(-20px);
-	}
 	.section {
 		transform-style: preserve-3d;
 		position: relative;
@@ -419,8 +407,9 @@ h4 {
 		font-size: 1.25em;
 	}
 	#experience {
-		height: 105vh;
+		height: 100vh;
 		width: 100%;
+		margin-bottom: 5vh;
 	}
 
 	#experience-info__container {
@@ -484,50 +473,60 @@ h4 {
 	.job-skills {
 		display: none;
 	}
+	#projects {
+		width: 100%;
+		gap: 1em;
+		height: 95vh;
+		display: grid;
+		/* align-content: center; */
+		justify-content: start;
+		align-items: center;
+		justify-items: center;
+	}
 	#projects,
 	#projects-gallery {
 		width: 100%;
 		gap: 1em;
 		height: 100vh;
+		display: grid;
 	}
 
 	#projects-gallery {
-		display: flex;
-		flex-flow: wrap row;
-		justify-content: center;
+		display: grid;
+		margin-left: 2em;
+		width: 85vw;
+		grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+		align-content: space-around;
+		justify-items: center;
 	}
-	.project-tile > a > img {
+	.project-img,
+	.project-title--over {
 		width: 28vw;
 		height: 19.5vw;
 	}
 	.project-tile {
 		display: flex;
-		width: 30%;
-		height: 50%;
+		width: 28vw;
+		height: 19.5vw;
+		justify-content: center;
+		align-items: center;
 	}
 	.project_link {
 		text-decoration: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.project-title--over {
 		position: absolute;
-		top: 9.8%;
-
-		margin: 0 auto;
-		font-size: 1.4vw;
-		font-family: 'Merriweather Sans';
-		font-weight: 800;
-		text-align: center;
-		background: var(--picton-blue);
-		width: 28vw;
-		height: 18vw;
-		padding: 9.8vw 0;
-
-		transition-delay: 0.1s;
-		transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
-		transition: 0.5s;
-		color: var(--platinum);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: transparent;
 	}
 	.project-title--over:hover {
 		opacity: 0.8;
+		background: var(--picton-blue);
+		color: var(--platinum);
 	}
 }
