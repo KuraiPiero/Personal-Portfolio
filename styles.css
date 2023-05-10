@@ -2,6 +2,7 @@
 	--tomato: #e66751;
 	--chrysler-blue: #431dd7;
 	--picton-blue: #48b8f4;
+	--picton-blue--low-op: #48b8f4b7;
 	--liver: #654843;
 	--hunyadi-yellow: #dda646;
 	--gunmetal: #333842;
@@ -544,11 +545,19 @@ h4 {
 		justify-content: center;
 		align-items: center;
 		color: transparent;
+		font-size: 2vw;
+		text-transform: uppercase;
+		font-family: 'Josefin Sans';
+		font-weight: 700;
+		transition-delay: 0.1s;
+		transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
 	}
 	.project-title--over:hover {
-		opacity: 0.8;
-		background: var(--picton-blue);
+		opacity: 1;
+		background: var(--picton-blue--low-op);
 		color: var(--platinum);
+
+		transition: 0.5s;
 	}
 }
 @media screen and (max-width: 1365px) {
