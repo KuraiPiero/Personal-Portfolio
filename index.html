@@ -12,23 +12,11 @@
 	</head>
 	<body>
 		<header id="header" role="banner" aria-label="Manuel Martinez's Portfolio">
-			<a href="#main-content" id="skip-link">Skip to main content</a>
 			<nav id="navbar" role="navigation">
-				<div id="primary-info">
-					<img
-						src="https://i.pinimg.com/originals/eb/28/c3/eb28c3e3b0a7ab9b5dc97d74df34701a.jpg"
-						alt="Manuel Martinez's Portfolio Image"
-						id="portfolio-img"
-						title="Manuel Martinez's Portfolio Image"
-					/>
-					<div class="text-info">
-						<h1 role="heading">Manuel Martinez</h1>
-						<h3 role="sub-title">Web Designer</h3>
-					</div>
-				</div>
-
+				<input type="checkbox" id="toggle" />
+				<label for="toggle" class="toggle-menu">&#9776;</label>
 				<ul id="sections-list" role="list">
-					<li class="nav-item border-top" role="list-item">
+					<li class="nav-item" role="list-item">
 						<a href="#welcome-section" rel="noopener" class="link" role="link" aria-current="page" tabindex="1">
 							<span class="icon"><i class="fas fa-home"></i></span>
 							<h3>Home</h3>
@@ -54,25 +42,34 @@
 						</a>
 					</li>
 				</ul>
-
 				<ul id="social-media__list">
-					<li class="social-media-item">
-						<a href="https://www.linkedin.com/in/alastar-blacksnow/" rel="noopener" class="social-media-link" target="_blank" role="link" tabindex="5" id="profile-link">
+					<li class="nav-item social-media-item">
+						<a href="www.linkedin.com/in/tre3s-byte" rel="noopener" class="social-media-link" target="_blank" role="link" tabindex="5" id="profile-link">
 							<i class="fa-brands fa-linkedin-in"></i
 						></a>
 					</li>
-					<li class="social-media-item">
-						<a href="https://github.com/KuraiPiero?tab=repositories" rel="noopener" class="social-media-link" target="_blank" role="link" tabindex="6"
-							><i class="fa-brands fa-github"></i>
-						</a>
+					<li class="nav-item social-media-item">
+						<a href="https://github.com/Tre3s-byte" rel="noopener" class="social-media-link" target="_blank" role="link" tabindex="6"><i class="fa-brands fa-github"></i> </a>
 					</li>
-					<li class="social-media-item">
-						<a href="https://www.freecodecamp.org/kuraipiero" rel="noopener" class="social-media-link" target="_blank" role="link" tabindex="7">
+					<li class="nav-item social-media-item">
+						<a href="https://www.freecodecamp.org/tre3s-byte" rel="noopener" class="social-media-link" target="_blank" role="link" tabindex="7">
 							<i class="fa-brands fa-free-code-camp"></i
 						></a>
 					</li>
 				</ul>
 			</nav>
+			<div id="primary-info">
+				<img
+					src="https://i.pinimg.com/originals/eb/28/c3/eb28c3e3b0a7ab9b5dc97d74df34701a.jpg"
+					alt="Manuel Martinez's Portfolio Image"
+					id="portfolio-img"
+					title="Manuel Martinez's Portfolio Image"
+				/>
+				<div class="text-info">
+					<h1 role="heading">Manuel Martinez</h1>
+					<h3 role="sub-title">Web Designer</h3>
+				</div>
+			</div>
 		</header>
 		<main id="portfolio-content" role="main">
 			<section id="welcome-section" class="section parallax bg">
