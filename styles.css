@@ -556,7 +556,6 @@ h4 {
 		opacity: 1;
 		background: var(--picton-blue--low-op);
 		color: var(--platinum);
-
 		transition: 0.5s;
 	}
 }
